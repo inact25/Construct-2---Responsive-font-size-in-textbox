@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable comment="You can set your font size here" constant="0" name="initialFontSize" sid="480285775562676" static="0" type="number">37</variable>
+        <variable comment="Automatically generate Layout Width" constant="0" name="initialLayoutWidth" sid="528353113841887" static="0" type="number">0</variable>
+        <variable comment="Automaticaly generate Dynamic font Size while resizing" constant="0" name="actualFontSize" sid="309641555468954" static="0" type="number">0</variable>
+        <event-block sid="234404227173131">
+            <conditions />
+            <actions>
+                <action id="-9" name="Set value" sid="915287886787079" type="System">
+                    <param id="0" name="Variable">initialLayoutWidth</param>
+                    <param id="1" name="Value">LayoutWidth</param>
+                </action>
+                <action id="-9" name="Set value" sid="618615736248182" type="System">
+                    <param id="0" name="Variable">actualFontSize</param>
+                    <param id="1" name="Value">(WindowWidth/initialLayoutWidth)*initialFontSize&amp;&quot;px&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="140277937465861" type="initialFont">
+                    <param id="0" name="Text">&quot;Initial Font Size :&quot; &amp;initialFontSize</param>
+                </action>
+                <action id="0" name="Set text" sid="187979744894331" type="actualFont">
+                    <param id="0" name="Text">&quot;Actual Font Font Size :&quot; &amp;actualFontSize</param>
+                </action>
+                <action id="0" name="Set text" sid="143355907662792" type="initialLayout">
+                    <param id="0" name="Text">&quot;Initial Layout Width :&quot; &amp;initialLayoutWidth</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="943001250209620" type="iniTextbox">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">(WindowWidth/initialLayoutWidth)*initialFontSize&amp;&quot;px&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
